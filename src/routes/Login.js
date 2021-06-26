@@ -15,15 +15,15 @@ const Login = () => {
         }
     };
     const onSubmit = (event) => {
-        event.preventDefault();
+        event.preventDefault();     //default행위가 실행되지 않도록 막는다
     };
     return(
         <div>
             <h1>로그인</h1>
-            <form onSubmit={onSubmit}>
+            <form onSubmit={onSubmit}> {/* form을 제출할 때 onSubmit함수가 실행되도록 한다 */}
                 <input  
                 name="id" 
-                type="text" 
+                type="id" 
                 placeholder="ID" 
                 required 
                 value={id} 

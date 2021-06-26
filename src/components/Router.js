@@ -1,27 +1,40 @@
 import React, { useState } from "react";
-import {HashRouter as Router, Route, Switch} from "react-router-dom";
+import {BrowserRouter, Route, Switch, Link} from "react-router-dom";
 import Login from "../routes/Login";
 import Home from "../routes/Home";
 import Recipe from "../routes/Recipe";
 import Ingredient from "../routes/Ingredient";
+import addIngr from "../routes/addIngr";
 
 const AppRouter = ({isLoggedIn}) => {
     return (
-        <Router>
+        <BrowserRouter>
             <Switch>
                 {isLoggedIn ? (
                 <>
                 <Route exact path="/">
                     <Home />
                 </Route>
+                <Route exact path="/Recipe"><Recipe /></Route>
+                <Route exact path="/Ingredient"><Ingredient /></Route>
+                <Route exact path="/addIngr"><addIngr /></Route>
                 </> 
                 ) : (
                 <Route exact path="/">
                     <Login/>
                 </Route>
                 )}
+                
             </Switch>
-        </Router>
+            <ul>
+                <button>
+                    <Link to="/Recipe">저장된 레시피 조회</Link>
+                </button><br></br>
+                <button>
+                    <Link to="/Ingredient">저장된 재료 조회</Link>
+                </button>
+            </ul>
+        </BrowserRouter>
     );
 };
 
