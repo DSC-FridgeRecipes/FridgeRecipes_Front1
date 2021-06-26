@@ -18,6 +18,14 @@ const AppRouter = ({isLoggedIn}) => {
                 <Route exact path="/Recipe"><Recipe /></Route>
                 <Route exact path="/Ingredient"><Ingredient /></Route>
                 <Route exact path="/addIngr"><addIngr /></Route>
+                <ul>
+                    <button>
+                        <Link to="/Recipe">저장된 레시피 조회</Link>
+                    </button><br></br>
+                    <button>
+                        <Link to="/Ingredient">저장된 재료 조회</Link>
+                    </button>
+                </ul>
                 </> 
                 ) : (
                 <Route exact path="/">
@@ -26,14 +34,7 @@ const AppRouter = ({isLoggedIn}) => {
                 )}
                 
             </Switch>
-            <ul>
-                <button>
-                    <Link to="/Recipe">저장된 레시피 조회</Link>
-                </button><br></br>
-                <button>
-                    <Link to="/Ingredient">저장된 재료 조회</Link>
-                </button>
-            </ul>
+            
         </BrowserRouter>
     );
 };
