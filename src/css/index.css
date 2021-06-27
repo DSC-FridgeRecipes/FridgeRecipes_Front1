@@ -1,0 +1,19 @@
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #363636;
+  background-color: #FFFCE6;
+
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a{
+    text-decoration: none; 
+    color:#363636;
+}

@@ -1,0 +1,17 @@
+div{
+
+  font-family: "Nanum";
+  text-align: center;
+  color: #363636;
+
+}
+
+@font-face {
+    font-family: "Gothic";     
+    src: url("../css/font/GothicA1-Regular.ttf");
+  }
+  
+@font-face {
+  font-family: "Nanum";     
+  src: url("../css/font/NanumGothic-Regular.ttf");
+}

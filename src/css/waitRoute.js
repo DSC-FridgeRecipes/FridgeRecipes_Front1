@@ -8,11 +8,22 @@ import AddIngr from "../routes/addIngr";
 import AddRecipe from "../routes/AddRecipe";
 import ViewRecipe from "../routes/ViewRecipe";
 import SearchRecipe from "../routes/SearchRecipe";
-import Wrapper from "../css/Wrapper";
-import img1 from "../css/img/img1.png";
-import Button from "../css/Button";
+import styled from 'styled-components';
+import {shadow} from "../css/styleUtil"
 
+const Positioner = styled.div` //화면 가운데에 고정시킨다.
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+`;
 
+const ShadowedBox = styled.div` //그림자 설정
+    width: 500px;
+    padding: 20px;
+    background-color: #A3CDD9;
+    ${shadow(2)}
+`;
 
 const AppRouter = ({isLoggedIn}) => {
     return (
@@ -21,8 +32,8 @@ const AppRouter = ({isLoggedIn}) => {
                 {isLoggedIn ? (
                 <>
                 
-                <Wrapper>
-
+                <Positioner>
+                <ShadowedBox>
                 <Route exact path="/">
                     <Home />
                 </Route>
@@ -34,21 +45,16 @@ const AppRouter = ({isLoggedIn}) => {
                 <Route exact path="/SearchRecipe"><SearchRecipe /></Route>
                
                 <ul>
-                    <Button>
+                    <button>
                     <Link to="/Recipe">저장된 레시피 조회</Link>
-                    </Button>
+                    </button>
                     <br/>
-                    <Button>
+                    <button>
                     <Link to="/Ingredient">저장된 재료 조회</Link>
-                    </Button>
+                    </button>
                 </ul>
-                
-                </Wrapper>
-
-                <div className="img"> 
-                    <img src={img1}/>    
-                </div>
-
+                </ShadowedBox>
+                </Positioner>
                 </> 
                 ) : (
                 <>
