@@ -25,7 +25,7 @@ const Input = styled.input`
     padding-right: 0.5rem;
 `;
 
-// rest 쪽에는 onChange, type, name, value, placeholder 등의 input 에서 사용 하는 값들을 넣어줄수 있다.
+// rest 쪽에는 onChange, type, name, value 등 input 에서 사용 하는 값들을 넣어줄수 있음.
 const InputLabel = ({label, ...rest}) => (
     <Wrapper>
         <Label>{label}</Label>

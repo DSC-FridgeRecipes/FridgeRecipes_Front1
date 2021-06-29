@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {shadow} from "../css/styleUtil"
+import oc from 'open-color';
 
 const Positioner = styled.div` //화면 가운데에 고정시킨다.
     position: absolute;
@@ -10,8 +11,9 @@ const Positioner = styled.div` //화면 가운데에 고정시킨다.
 
 const ShadowedBox = styled.div` //그림자 설정
     width: 500px;
-    padding: 7px;
-    background-color: #A3CDD9;
+    padding: 5px;
+  //  background-color: linear-gradient(to right, ${oc.cyan[2]}, ${oc.indigo[6]});
+  background: linear-gradient(to right, ${oc.cyan[2]}, ${oc.indigo[6]});
     ${shadow(2)}
 `;
 

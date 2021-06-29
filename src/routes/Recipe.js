@@ -1,6 +1,10 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import Button from "../css/Button";
+import { ApolloProvider } from "@apollo/react-hooks";
+import { Recipes } from "./takeRecipes";
+import  client  from "../apollo";
+
 
 const Recipe = () => {
     let history = useHistory();
@@ -8,7 +12,9 @@ const Recipe = () => {
     return(
         <div>
             <h1>저장된 레시피</h1>
-            <h3>저장된 레시피가 없습니다. 레시피를 추가해주세요!</h3>
+            <ApolloProvider client={ client }>
+            <Recipes/>
+            </ApolloProvider>
             <Button>
             선택한 레시피 조회
             </Button>
