@@ -8,7 +8,7 @@ const Ingredient = () => {
     return(
         <div>
             <h1>저장된 재료</h1>
-            <Button>선택한 재료 삭제</Button><br></br>
+            <Button>선택한 재료 삭제</Button>
             <Button onClick={() => {
                 history.push("/addIngr");
             }}>+ 재료 추가하기</Button>

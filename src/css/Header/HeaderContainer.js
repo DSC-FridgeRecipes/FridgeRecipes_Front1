@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import Header from '../css/Header';
+import Header from './Header';
+import HomeButton from "./HomeButton";
 
 class HeaderContainer extends Component {
     render() {
         return (
             <Header>
-                
+              <HomeButton>
+
+              </HomeButton>
             </Header>
         );
     }

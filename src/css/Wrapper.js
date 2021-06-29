@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import {shadow} from "../css/styleUtil"
-import oc from 'open-color';
 
 const Positioner = styled.div` //화면 가운데에 고정시킨다.
     position: absolute;
@@ -23,7 +22,6 @@ const Contents = styled.div`
     background-color: #ffffff;
     
 `;
-
 
 
 

@@ -12,11 +12,11 @@ const Recipe = () => {
             <Button>
             선택한 레시피 조회
             </Button>
-            <br></br>
+          
             <Button>
             선택한 레시피 삭제
             </Button>
-            <br></br>
+         
             <Button onClick={() => {
                 history.push("/AddRecipe");
             }}>+ 레시피 추가하기

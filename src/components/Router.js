@@ -28,21 +28,19 @@ const AppRouter = ({isLoggedIn}) => {
                 </Route>
                 <Route exact path="/Recipe"><Recipe /></Route>
                 <Route exact path="/Ingredient"><Ingredient /></Route>
-                <Route exact path="/AddIngr"><AddIngr /></Route>
+                <Route exact path="/addIngr"><AddIngr /></Route>
                 <Route exact path="/AddRecipe"><AddRecipe /></Route>
                 <Route exact path="/ViewRecipe"><ViewRecipe /></Route>
                 <Route exact path="/SearchRecipe"><SearchRecipe /></Route>
-               
-                <ul>
-                    <Button>
+                    
+                <Button>
                     <Link to="/Recipe">저장된 레시피 조회</Link>
                     </Button>
-                    <br/>
+           
                     <Button>
                     <Link to="/Ingredient">저장된 재료 조회</Link>
                     </Button>
-                </ul>
-                
+
                 </Wrapper>
 
                 <div className="img"> 

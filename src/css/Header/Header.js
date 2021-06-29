@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import oc from 'open-color';
-import { shadow, media } from '../css/styleUtil'
-import { Link, Router } from "react-router-dom";
-import App from "../components/App"
+import { shadow, media } from '../styleUtil';
+
 
 // 상단 고정, 그림자
 const Positioner = styled.div`
@@ -47,8 +46,7 @@ const Logo = styled.div`
     font-size: 1.4rem;
     letter-spacing: 2px;
     color: #363636;
-    font-family: 'Nanum';
-    font-weight: bold;
+    font-family: 'Gugi';
 
 `;
 

@@ -29,7 +29,7 @@ const Btn_Wrapper = styled.div`
     }
 
     &:active {
-        background: #FFFCE6;
+        background: #506AD4;
     }
 
 `;

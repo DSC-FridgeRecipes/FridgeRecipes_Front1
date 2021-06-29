@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import AppRouter from './Router';
 import "../css/App.css"
-import HeaderContainer from '../css/HeaderContainer'
+import HeaderContainer from '../css/Header/HeaderContainer'
 
 function App() {   // 여기서 모든 로직을 다룬다
   const [isLoggedIn, setIsLoggedIn] = useState(true);
