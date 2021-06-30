@@ -11,7 +11,8 @@ import SearchRecipe from "../routes/SearchRecipe";
 import Wrapper from "../css/Wrapper";
 import img1 from "../css/img/img1.png";
 import Button from "../css/Button";
-
+import addIngr from "../routes/addIngr";
+import Test from '../routes/Test';
 
 const AppRouter = ({isLoggedIn}) => {
     return (
@@ -27,6 +28,7 @@ const AppRouter = ({isLoggedIn}) => {
                 </Route>
                 <Route exact path="/Recipe"><Recipe /></Route>
                 <Route exact path="/Ingredient"><Ingredient /></Route>
+
                 <Route exact path="/addIngredients"><addIngredients /></Route>
                 <Route exact path="/AddRecipe"><AddRecipe /></Route>
                 <Route exact path="/ViewRecipe"><ViewRecipe /></Route>
@@ -46,6 +48,7 @@ const AppRouter = ({isLoggedIn}) => {
                     <img src={img1}/>    
                 </div>
 
+                <Route exact path="/Test" component={Test}/>
                 </> 
                 ) : (
                 <>
