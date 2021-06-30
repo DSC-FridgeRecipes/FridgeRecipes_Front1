@@ -1,13 +1,15 @@
-import React from "react";
-import { useQuery } from "@apollo/react-hooks";
+import React, { useEffect } from "react";
+import { gql, useQuery } from "@apollo/react-hooks";
 import { GET_ALL_MY_RECIPE } from "../graphql/Query";
 
-const takeIngredients = ({match: {params : { userId }}}) => {
+/*const takeIngredients = () => {
 
-userId = Number(userId); 
 
 // eslint-disable-next-line react-hooks/rules-of-hooks
-const{ loading, error, data } = useQuery(GET_ALL_MY_RECIPE);
+const{ loading, error, data } = useQuery(GET_ALL_MY_RECIPE),{
+    variables: { userId:  'tester1@example.com' },
+
+});
 
 if(loading) return "Loading...";
 if(error) return `에러 발생 ${error.message}`;
@@ -25,3 +27,4 @@ return(
         };
 
 export { takeIngredients };
+*/

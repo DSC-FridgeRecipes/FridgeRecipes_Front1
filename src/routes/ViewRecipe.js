@@ -1,9 +1,10 @@
 import React from "react";
+import Button from "../css/Button";
 
 const ViewRecipe = () => {
     return(
         <div>
-            <button>레시피 저장</button>
+            <Button>레시피 저장</Button>
         </div>
     );
 };

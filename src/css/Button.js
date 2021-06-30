@@ -35,10 +35,10 @@ const Btn_Wrapper = styled.div`
 `;
 
 
-const Button = ({children}) => {
+const Button = ({children, onClick}) => {
     return(
         <div>
-    <Btn_Wrapper>
+    <Btn_Wrapper onClick={onClick}>
         {children}
     </Btn_Wrapper>
     </div>

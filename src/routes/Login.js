@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import InputLabel from "../css/InputLabel";
+import Wrapper from "../css/Wrapper";
+import img1 from "../css/img/img1.png";
 
 const Login = () => {
     const [email, setEmail] = useState("");    
@@ -18,26 +21,21 @@ const Login = () => {
         event.preventDefault();     //default행위가 실행되지 않도록 막는다
     };
     return(
-        <div>
+        <>
+        <Wrapper>
             <h1>로그인</h1>
             <form onSubmit={onSubmit}> {/* form을 제출할 때 onSubmit함수가 실행되도록 한다 */}
-                <input  
-                name="email" 
-                type="email" 
-                placeholder="Email" 
-                required 
-                value={email} 
-                onChange={onChange}/>
-                <input 
-                name="password"
-                type="password" 
-                placeholder="Password" 
-                required 
-                value={password}
-                onChange={onChange} />
-                <input type="submit" value="Log In"/>
+             <InputLabel name="email" type="email" placeholder="E-mail" value={email} onChange={onChange}/>
+             <InputLabel name="password" type="password" placeholder="Password" value={password} onChange={onChange}/>
+                <input type="submit" value="Login"/>
             </form>
-        </div>
+            </Wrapper>
+
+            <div className="img"> 
+                    <img src={img1}/>    
+                </div>
+
+        </>
     )
 }
 

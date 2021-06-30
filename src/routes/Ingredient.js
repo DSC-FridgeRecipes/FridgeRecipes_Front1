@@ -11,9 +11,6 @@ const Ingredient = () => {
     return(
         <div>
             <h1>저장된 재료</h1>
-            <ApolloProvider client={ client }>
-                <takeIngredients />
-            </ApolloProvider>
             <Button>선택한 재료 삭제</Button>
             <Button onClick={() => {
                 history.push("/addIngredients");
