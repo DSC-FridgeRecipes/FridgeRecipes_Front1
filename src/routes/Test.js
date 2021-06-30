@@ -22,7 +22,9 @@ const Back = () => {
                 <p>{`Error! ${error}`}</p>
             )}
             { data && data.getRecipesWithSomeIngredients.map((recipe, idx) => (
-                <div>
+                <div
+                    key={recipe.id}
+                >
                     <h3>{`${recipe.title}`}</h3>
                     <p>{`${recipe.content}`}</p>
                 </div>
