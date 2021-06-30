@@ -30,6 +30,21 @@ export const GET_ALL_MY_RECIPE = gql`
     }
 `
 
+/* User - Ingredients */
+export const GET_ALL_MY_INGREDIENTS = gql`
+    query GetAllMyRecipes($userId: ID!) {
+        getAllMyRecipes(
+            userId: $userId
+        ) {
+            id
+            title
+            ingredientNameList
+            ingredientAmountList
+            content
+        }
+    }
+`
+
 /* Retrieved Recipe */
 export const GET_RECIPES_WITH_ALL_INGREDIENTS = gql`
     query GetRecipesAllIngredients($ingredients: [String]!) {
