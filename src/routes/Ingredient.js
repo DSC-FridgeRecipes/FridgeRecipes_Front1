@@ -2,7 +2,7 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import Button from "../css/Button";
 import { ApolloProvider } from "@apollo/react-hooks";
-import { Ingredients } from "./takeIngredients";
+import { takeIngredients } from "./takeIngredients";
 import  client  from "../apollo";
 
 const Ingredient = () => {
@@ -12,7 +12,7 @@ const Ingredient = () => {
         <div>
             <h1>저장된 재료</h1>
             <ApolloProvider client={ client }>
-                <Ingredients />
+                <takeIngredients />
             </ApolloProvider>
             <Button>선택한 재료 삭제</Button>
             <Button onClick={() => {

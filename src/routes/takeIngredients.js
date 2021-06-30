@@ -2,8 +2,11 @@ import React from "react";
 import { useQuery } from "@apollo/react-hooks";
 import { GET_ALL_MY_RECIPE } from "../graphql/Query";
 
-const Ingredients = () => {
+const takeIngredients = ({match: {params : { userId }}}) => {
 
+userId = Number(userId); 
+
+// eslint-disable-next-line react-hooks/rules-of-hooks
 const{ loading, error, data } = useQuery(GET_ALL_MY_RECIPE);
 
 if(loading) return "Loading...";
@@ -21,4 +24,4 @@ return(
 
         };
 
-export { Ingredients };
+export { takeIngredients };
