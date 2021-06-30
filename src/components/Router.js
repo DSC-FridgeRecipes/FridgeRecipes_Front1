@@ -5,6 +5,7 @@ import Home from "../routes/Home";
 import Recipe from "../routes/Recipe";
 import Ingredient from "../routes/Ingredient";
 import addIngr from "../routes/addIngr";
+import Test from '../routes/Test';
 
 const AppRouter = ({isLoggedIn}) => {
     return (
@@ -26,11 +27,13 @@ const AppRouter = ({isLoggedIn}) => {
                         <Link to="/Ingredient">저장된 재료 조회</Link>
                     </button>
                 </ul>
+                <Route exact path="/Test" component={Test}/>
                 </> 
                 ) : (
                 <Route exact path="/">
                     <Login/>
                 </Route>
+                
                 )}
                 
             </Switch>
