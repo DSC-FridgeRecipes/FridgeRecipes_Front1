@@ -1,5 +1,5 @@
 import React from "react";
-import { useMutation } from "@apollo/react-hooks";
+import { useMutation } from "@apollo/client";
 import { ADD_MY_INGREDIENT } from "../graphql/Mutation";
 
 const addIngredients = () => {

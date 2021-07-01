@@ -11,7 +11,8 @@ import SearchRecipe from "../routes/SearchRecipe";
 import Wrapper from "../css/Wrapper";
 import img1 from "../css/img/img1.png";
 import Button from "../css/Button";
-
+import addIngr from "../routes/addIngr";
+import Test from '../routes/Test';
 
 const AppRouter = ({isLoggedIn}) => {
     return (
@@ -45,7 +46,7 @@ const AppRouter = ({isLoggedIn}) => {
                 <div className="img"> 
                     <img src={img1}/>    
                 </div>
-
+                <Route exact path="/Test" component={Test}/>
                 </> 
                 ) : (
                 <>
