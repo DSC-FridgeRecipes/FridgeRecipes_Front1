@@ -11,15 +11,14 @@ const AddIngredients = () => {
 
     console.log(data);
 
-    return(
+    return (
         <div>
             <form onSubmit = { e => {
                 e.preventDefault();
-                addIngr( {
-                    variables:{
-                        input: {
-                            name: input.value
-                        }
+                addIngr({
+                    variables: {
+                        userId: '60d499a79fa1ed5f303b77a7', // userId 수정 필요
+                        ingredient: input.value,
                     }
                 });
                 input.value = "";
@@ -29,7 +28,6 @@ const AddIngredients = () => {
                 }} />
                 <button type="submit">재료 추가하기</button>
             </form>
-
         </div>
     );
 
