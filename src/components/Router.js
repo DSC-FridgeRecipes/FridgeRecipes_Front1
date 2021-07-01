@@ -34,13 +34,7 @@ const AppRouter = ({isLoggedIn}) => {
                 <Route exact path="/ViewRecipe"><ViewRecipe /></Route>
                 <Route exact path="/SearchRecipe"><SearchRecipe /></Route>
                     
-                <Button>
-                    <Link to="/Recipe">저장된 레시피 조회</Link>
-                </Button>
-           
-                <Button>
-                    <Link to="/Ingredient">저장된 재료 조회</Link>
-                </Button>
+                
 
                 </Wrapper>
 
