@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { gql, useQuery } from "@apollo/react-hooks";
+import { gql, useQuery } from "@apollo/client";
 import { GET_ALL_MY_RECIPE } from "../graphql/Query";
 
 /*const takeIngredients = () => {
