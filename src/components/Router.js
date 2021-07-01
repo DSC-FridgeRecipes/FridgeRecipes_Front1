@@ -39,7 +39,7 @@ const AppRouter = ({isLoggedIn}) => {
            
                     <Button>
                     <Link to="/Ingredient">저장된 재료 조회</Link>
-                    </Button>
+                </Button>
 
                 </Wrapper>
 

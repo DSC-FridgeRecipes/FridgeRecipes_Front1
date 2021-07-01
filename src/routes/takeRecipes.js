@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useQuery } from "@apollo/client";
 import { GET_ALL_MY_RECIPE } from "../graphql/Query";
 
-const takeRecipes  = () => {
+const TakeRecipes  = () => {
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const { loading, error, data } = useQuery(GET_ALL_MY_RECIPE, {
-        variables: { userId : 'tester1@example.com' },
+        variables: { userId : '60d499a79fa1ed5f303b77a7' },
       });
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -22,7 +22,7 @@ const takeRecipes  = () => {
             { error && (
                 <p>{`Error! ${error}`}</p>
             )}
-            { data && data.GetAllMyRecipes.map((recipe, idx) => (
+            { data && data.getAllMyRecipes.map((recipe, idx) => (
                 <div>
                     <h3>{`${recipe.title}`}</h3>
                     <p>{`${recipe.content}`}</p>
@@ -35,4 +35,4 @@ const takeRecipes  = () => {
     );
 };
 
-export default takeRecipes ; 
+export default TakeRecipes; 
