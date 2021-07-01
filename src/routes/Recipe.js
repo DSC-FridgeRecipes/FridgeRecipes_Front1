@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import Button from "../css/Button";
-import TakeRecipes from "./TakeRecipes";
+import TakeRecipes from "../components/TakeRecipes";
 
 const Recipe = () => {
     let history = useHistory();
