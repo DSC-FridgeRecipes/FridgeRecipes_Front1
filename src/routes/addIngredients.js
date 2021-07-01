@@ -2,7 +2,7 @@ import React from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_MY_INGREDIENT } from "../graphql/Mutation";
 
-const addIngredients = () => {
+const AddIngredients = () => {
 
     let input;
 
@@ -15,7 +15,7 @@ const addIngredients = () => {
         <div>
             <form onSubmit = { e => {
                 e.preventDefault();
-                addIngr({
+                addIngr( {
                     variables:{
                         input: {
                             name: input.value
@@ -35,4 +35,4 @@ const addIngredients = () => {
 
 };
 
-export { addIngredients };
+export default AddIngredients;
