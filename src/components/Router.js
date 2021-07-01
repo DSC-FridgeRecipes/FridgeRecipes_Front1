@@ -8,6 +8,7 @@ import addIngredients from "../routes/addIngredients";
 import AddRecipe from "../routes/AddRecipe";
 import ViewRecipe from "../routes/ViewRecipe";
 import SearchRecipe from "../routes/SearchRecipe";
+import SignUp from "../routes/SignUp";
 import Wrapper from "../css/Wrapper";
 import img1 from "../css/img/img1.png";
 import Button from "../css/Button";
@@ -35,11 +36,11 @@ const AppRouter = ({isLoggedIn}) => {
                     
                 <Button>
                     <Link to="/Recipe">저장된 레시피 조회</Link>
-                    </Button>
+                </Button>
            
-                    <Button>
+                <Button>
                     <Link to="/Ingredient">저장된 재료 조회</Link>
-                    </Button>
+                </Button>
 
                 </Wrapper>
 
@@ -53,6 +54,7 @@ const AppRouter = ({isLoggedIn}) => {
                 <Route exact path="/">
                     <Login/>
                 </Route>
+                <Route exact path="/SignUp"><SignUp /></Route>
                 <Redirect from="*" to="/" />
                 </>
                 )}
