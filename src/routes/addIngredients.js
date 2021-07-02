@@ -16,12 +16,14 @@ const AddIngredients = () => {
 
     return (
         <div>
+            <h1>재료 추가하기</h1>
             <form onSubmit = { e => {
                 e.preventDefault();
                 addIngr({
                     variables: {
                         userId: '60d499a79fa1ed5f303b77a7', // userId 수정 필요
-                        ingredient: input.value,
+                        ingredient: input.value
+                        
                     }
                 });
                 input.value = "";
@@ -29,7 +31,8 @@ const AddIngredients = () => {
                 <input ref={ node => {
                     input = node;
                 }} />
-                <Button onClick={()=>alert('재료가 추가되었습니다!')}>재료 추가하기</Button>
+                <button type="submit" onClick={()=>alert('재료가 추가되었습니다!')}>재료 추가하기</button>
+                {/* <Button type="submit" >재료 추가하기</Button> */}
                 <Button onClick={() => {
                     history.push("/");
                 }}>홈화면으로 돌아가기

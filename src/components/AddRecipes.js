@@ -3,7 +3,7 @@ import { useQuery } from "@apollo/client";
 import { GET_ALL_MY_RECIPE } from "../graphql/Query";
 import '../css/App.css';
 
-const TakeRecipes = () => {
+const AddRecipes = () => {
     //const {getAllMyRecipes, setGetAllMyRecipes} = useState({});
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const { loading, error, data } = useQuery(GET_ALL_MY_RECIPE, {
@@ -52,8 +52,8 @@ const TakeRecipes = () => {
                     // }} 
                     type="checkbox" 
                     checked={recipe.select}/>
-                    <text className="ingredientName"> {`${recipe.title}`} </text>
-                    {/* <td>{`${recipe.content}`}</td> */}
+                    <text className="ingredientName"> {`${recipe.title}`} </text><br></br>
+                    <text>{`${recipe.content}`}</text>
                 </div>
                 // <div>
 
@@ -66,5 +66,5 @@ const TakeRecipes = () => {
     );
 };
 
-export default TakeRecipes;
+export default AddRecipes;
 

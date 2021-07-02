@@ -13,7 +13,7 @@ const ViewRecipe = () => {
             <Button onClick={() => {
                     history.push("/");
                 }}>홈화면으로 돌아가기
-                </Button>
+            </Button>
         </div>
 
     );

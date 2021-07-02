@@ -1,9 +1,14 @@
-import React from "react";
-// import Button from "../css/Button";
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
+import InputLabel from "../css/InputLabel";
+import Wrapper from "../css/Wrapper";
+import img1 from "../css/img/img1.png";
+import Button from "../css/Button";
 
 const SignUp = () => {
-
     return(
+        <>
+        <Wrapper>
         <div>
             <h1>회원가입</h1>
             <form>
@@ -16,6 +21,12 @@ const SignUp = () => {
                 <input type = "reset"  value = "지우기" /><br></br>
             </form>
         </div>
+        </Wrapper>
+
+        <div className="img"> 
+            <img src={img1}/>    
+        </div>
+        </>
     );
 };
 

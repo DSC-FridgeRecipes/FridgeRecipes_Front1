@@ -37,13 +37,11 @@ const Login = () => {
                 }}>회원가입
                 </Button>
             </form>
-            
         </Wrapper>
 
-            <div className="img"> 
-                    <img src={img1}/>    
-                </div>
-
+        <div className="img"> 
+            <img src={img1}/>    
+        </div>
         </>
     );
 }

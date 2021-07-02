@@ -25,3 +25,8 @@ div{
   font-family: "Sunflower";     
   src: url("../css/font/Sunflower-Medium.ttf");
 }
+
+.ingredientName{
+  font-size : 23px;
+  font-weight: bold;
+}
