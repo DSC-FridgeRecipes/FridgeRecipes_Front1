@@ -1,25 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
+import Button from "../css/Button";
 import InputLabel from "../css/InputLabel";
 import Wrapper from "../css/Wrapper";
 import img1 from "../css/img/img1.png";
-import Button from "../css/Button";
 
 const SignUp = () => {
     return(
         <>
         <Wrapper>
         <div>
+            <img src={img1}/>  
+        <Wrapper>
             <h1>회원가입</h1>
             <form>
                 <h3>개인 정보 입력</h3>
-                이름 : <input type = "text" name = "name" required/><br></br>
-                이메일 : <input type = "text" name = "email" required/><br></br>
-                닉네임 : <input type = "text" name = "nickname"/><br></br>
-                비밀번호 : <input type = "password" name = "password" required/><br></br>
-                <input type = "submit"  value = "가입" />
-                <input type = "reset"  value = "지우기" /><br></br>
+                <InputLabel type = "text" placeholder="이름" name = "name" required/>
+                <InputLabel type = "text" placeholder="E-mail" name = "email" required/>
+                <InputLabel type = "text" placeholder="닉네임" name = "nickname"/>
+                <InputLabel type = "password" placeholder="비밀번호" name = "password" required/>
+                <Button type = "submit">회원가입</Button>
+                <Button type = "reset">지우기</Button>
             </form>
+        </Wrapper>
         </div>
         </Wrapper>
 
